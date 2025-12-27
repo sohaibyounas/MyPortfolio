@@ -60,12 +60,12 @@ const EducationSection = () => {
                         {edu.logo}
                       </div>
                       <div>
-                        <CardTitle className="xxs:text-[12px] xs:text-[14px] sm:text-[16px] md:text-[20px] sm:font-medium md:font-semibold text-foreground mb-1 text-nowrap">
+                        <CardTitle className="xxs:text-[12px] xs:text-[14px] sm:text-[16px] md:text-[20px] sm:font-medium md:font-semibold text-foreground mb-1 whitespace-normal">
                           {edu.institution}
                         </CardTitle>
-                        <div className="flex items-center gap-2 text-primary xs:font-normal sm:font-medium mb-2 text-nowrap xxs:text-[9px] xs:text-[11px] sm:text-[11px] md:text-[16px]">
-                          <GraduationCap className="w-4 h-4" />
-                          {edu.degree}
+                        <div className="flex items-center gap-2 text-primary xs:font-normal sm:font-medium mb-2 whitespace-normal xxs:text-[9px] xs:text-[11px] sm:text-[11px] md:text-[16px]">
+                          <GraduationCap className="w-4 h-4 shrink-0" />
+                          <span>{edu.degree}</span>
                         </div>
                         <div className="flex xxs:item-start xs:item-start sm:item-start md:items-center xxs:flex-col xs:flex-col sm:flex-col md:flex-row xxs:pr-[18px] gap-4 text-sm text-muted-foreground">
                           <div className="flex items-center gap-1">

@@ -4,10 +4,11 @@ import { CalendarDays, MapPin, Building2 } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
+    // 1st
     {
       company: "Stylee.pk",
       position: "Frontend Developer",
-      duration: "December 2018 - January 2020",
+      duration: "December 2022 - December 2024",
       location: "Faisalabad, Pakistan",
       logo: "🔵",
       type: "Full-time",
@@ -21,6 +22,8 @@ const ExperienceSection = () => {
       ],
       technologies: ["JavaScript", "React js", "Material UI"],
     },
+
+    // 2nd
     {
       company: "Drudots Technologies",
       position: "Frontend Developer",
@@ -38,32 +41,79 @@ const ExperienceSection = () => {
       ],
       technologies: ["React", "TypeScript", "Redux", "SCSS", "Jest"],
     },
+
+    // 3rd
     {
-      company: "Public Administration",
-      position: "IT & Network Administrative",
-      duration: "July 2017 - November 2018",
-      location: "Haroonabad, Pakistan",
-      logo: "📝",
-      type: "Full-time",
-      description:
-        "Managed and supported company IT systems and network operations",
+      company: "Public Administrator",
+      position: "Computer Operator & Database Administrator",
+      duration: "July 2019 - June 2020",
+      location: "Bahawalnagar, Pakistan",
+      logo: "🇵🇰",
+      type: "Job",
+      description: "One year job at public administration",
       achievements: [
-        "Maintained Windows servers and Active Directory users",
-        "Monitored and troubleshooted network connectivity issues",
-        "Configured firewalls, routers, and VPN access",
-        "Performed regular data backups and system updates",
-        "Supported Office 365 and email services for staff",
-        "Provided technical support for hardware and software issues",
+        "Managed Windows Server environments and User Administration",
+        "Handled Network Troubleshooting and Connectivity maintenance",
+        "Overseeing Hardware/Software installation and upgrades",
+        "Ensured data integrity through regular Backup & Recovery procedures",
+        "Provided end-user technical support for government officials",
       ],
       technologies: [
         "Windows Server",
-        "Active Directory (AD)",
-        "DNS / DHCP",
-        "TCP/IP",
-        "Office 2016 / Exchange",
-        "PowerShell / Bash Scripting",
-        "Git / GitHub / GitLab",
-        "Backup & Recovery",
+        "Active Directory",
+        "Networking/TCP-IP",
+        "System Administration",
+        "Hardware Support",
+      ],
+    },
+
+    // 4th
+    {
+      company: "National Textile University",
+      position: "Web Developer (Remote)",
+      duration: "July 2018 - July 2019",
+      location: "Faisalabad, Pakistan",
+      logo: "🎓",
+      type: "Remote Project",
+      description:
+        "Provided remote services for a dedicated project with the Department of Computer Science",
+      achievements: [
+        "Specialized in Web-based Development for university projects",
+        "Applied advanced problem-solving using programming techniques",
+        "Delivered satisfactory results under the supervision of the CS Department Chairman",
+        "Collaborated remotely to meet project milestones",
+      ],
+      technologies: [
+        "Web Development",
+        "Programming Logic",
+        "Problem Solving",
+        "Remote Collaboration",
+      ],
+    },
+
+    // 5th
+    {
+      company: "DCO Office Bahawalnagar",
+      position: "IT & Network Administrative",
+      duration: "July 2017 - June 2018",
+      location: "Bahawalnagar, Pakistan",
+      logo: "🇵🇰",
+      type: "Internship",
+      description:
+        "One year internship under Prime Minister's Youth Training Scheme (Phase-I)",
+      achievements: [
+        "Managed Windows Server environments and User Administration",
+        "Handled Network Troubleshooting and Connectivity maintenance",
+        "Overseeing Hardware/Software installation and upgrades",
+        "Ensured data integrity through regular Backup & Recovery procedures",
+        "Provided end-user technical support for government officials",
+      ],
+      technologies: [
+        "Windows Server",
+        "Active Directory",
+        "Networking/TCP-IP",
+        "System Administration",
+        "Hardware Support",
       ],
     },
   ];
@@ -104,7 +154,7 @@ const ExperienceSection = () => {
                           {exp.logo}
                         </div>
                         <div>
-                          <CardTitle className="xxs:text-[14px] xs:text-[18px] sm:text-[20px] xxs:font-medium xs:font-bold sm:font-semibold  text-nowrap">
+                          <CardTitle className="xxs:text-[10px] xs:text-[12px] sm:text-[20px] xxs:font-medium xs:font-bold sm:font-semibold  text-nowrap">
                             {exp.position}
                           </CardTitle>
                           <div className="flex items-center gap-2 text-primary xxs:font-normal xs:font-medium text-nowrap xxs:text-[14px] xs:text-[16px] sm:text-[18px]">
