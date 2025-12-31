@@ -98,10 +98,10 @@ const ProjectSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400 animate-fade-in-up">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
             A showcase of my recent work, side projects, and experiments.
           </p>
         </div>

@@ -53,10 +53,10 @@ const WhatIDoSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 animate-fade-in-up">
             What I Do
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
             Crazy front end developer who wants to explore every tech stack
           </p>
         </div>
@@ -74,21 +74,21 @@ const WhatIDoSection = () => {
                 className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
               />
 
-              <CardHeader className="relative z-10 pb-2">
+              <CardHeader className="relative z-10 pb-2 p-4 xs:p-6">
                 <div className="flex items-center gap-4">
                   <div
-                    className={`p-3 rounded-xl bg-gray-800/50 border border-gray-700 ${service.iconColor} group-hover:scale-110 transition-transform duration-300`}
+                    className={`p-2.5 xs:p-3 rounded-xl bg-gray-800/50 border border-gray-700 ${service.iconColor} group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <service.icon className="w-8 h-8" />
+                    <service.icon className="w-6 h-6 xs:w-8 xs:h-8" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-100">
+                  <CardTitle className="text-xl xs:text-2xl font-bold text-gray-100">
                     {service.title}
                   </CardTitle>
                 </div>
               </CardHeader>
 
-              <CardContent className="relative z-10 space-y-4">
-                <p className="text-gray-400 text-base leading-relaxed">
+              <CardContent className="relative z-10 space-y-4 p-4 xs:p-6 pt-0 xs:pt-0">
+                <p className="text-gray-400 text-sm xs:text-base leading-relaxed">
                   <span className="text-yellow-500 mr-2">⚡</span>
                   {service.description}
                 </p>
@@ -98,7 +98,7 @@ const WhatIDoSection = () => {
                     <Badge
                       key={tech}
                       variant="secondary"
-                      className="bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-colors duration-200 px-3 py-1 rounded-full text-xs font-medium"
+                      className="bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white border border-gray-700 transition-colors duration-200 px-2 xs:px-3 py-0.5 xs:py-1 rounded-full text-[10px] xs:text-xs font-medium"
                     >
                       {tech}
                     </Badge>

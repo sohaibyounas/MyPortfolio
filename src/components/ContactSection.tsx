@@ -8,13 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -107,10 +101,10 @@ const ContactSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="xxs:text-[30px] xs:text-[30px] sm:text-[36px] md:text-[48px] font-heading font-bold mb-4 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 animate-fade-in-up">
             Contact Me
           </h2>
-          <p className="xxs:text-[14px] xs:text-[18px] sm:text-[20px] text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             Let's discuss your next project. I'm always interested in new
             opportunities and collaborations.
           </p>
@@ -137,10 +131,10 @@ const ContactSection = () => {
                   key={info.title}
                   className="hover:shadow-md transition-all duration-300 hover:-translate-y-1"
                 >
-                  <CardContent className="p-4">
+                  <CardContent className="p-3 xs:p-4">
                     <a
                       href={info.href}
-                      className="flex items-center gap-4 group"
+                      className="flex items-center gap-3 xs:gap-4 group"
                       target={
                         info.href.startsWith("http") ? "_blank" : undefined
                       }

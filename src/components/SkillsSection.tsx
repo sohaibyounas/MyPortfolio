@@ -83,10 +83,10 @@ const SkillsSection = () => {
 
       <div className="section-container relative z-10">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-bold font-heading bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 animate-fade-in-up">
             Technical Proficiency
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
             A comprehensive overview of my technical skills and tools I use to
             build digital products.
           </p>
@@ -116,22 +116,22 @@ const SkillsSection = () => {
               className="bg-[#1A1A1A]/80 backdrop-blur-md border-gray-800 hover:border-gray-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardHeader className="pb-2">
+              <CardHeader className="pb-2 p-4 xs:p-6">
                 <div className="flex items-center gap-3 mb-2">
                   <div
-                    className={`p-2.5 rounded-lg bg-gray-800 ${category.color} group-hover:scale-110 transition-transform`}
+                    className={`p-2 rounded-lg bg-gray-800 ${category.color} group-hover:scale-110 transition-transform`}
                   >
-                    <category.icon className="w-6 h-6" />
+                    <category.icon className="w-5 h-5 xs:w-6 xs:h-6" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-100">
+                  <CardTitle className="text-lg xs:text-xl font-bold text-gray-100">
                     {category.title}
                   </CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-6 pt-4">
+              <CardContent className="space-y-4 xs:space-y-6 pt-2 xs:pt-4 p-4 xs:p-6">
                 {category.skills.map((skill, i) => (
                   <div key={skill.name} className="space-y-2">
-                    <div className="flex justify-between items-center text-sm">
+                    <div className="flex justify-between items-center text-xs xs:text-sm">
                       <span className="text-gray-300 font-medium">
                         {skill.name}
                       </span>
@@ -139,7 +139,7 @@ const SkillsSection = () => {
                     </div>
                     <Progress
                       value={skill.level}
-                      className="h-2 bg-gray-800"
+                      className="h-1.5 xs:h-2 bg-gray-800"
                       indicatorClassName={`bg-gradient-to-r ${
                         index === 0
                           ? "from-blue-500 to-cyan-500"

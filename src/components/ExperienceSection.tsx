@@ -123,10 +123,10 @@ const ExperienceSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="xs:text-[25px] sm:text-[25px] md:text-[48px] font-heading font-bold mb-4 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 animate-fade-in-up">
             Work Experience
           </h2>
-          <p className="xxs:text-[16px] sm:text-[20px] text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             My professional journey building amazing products at great companies
           </p>
         </div>
@@ -154,26 +154,29 @@ const ExperienceSection = () => {
                           {exp.logo}
                         </div>
                         <div>
-                          <CardTitle className="xxs:text-[10px] xs:text-[12px] sm:text-[20px] xxs:font-medium xs:font-bold sm:font-semibold  text-nowrap">
+                          <CardTitle className="text-sm xs:text-base md:text-xl font-bold">
                             {exp.position}
                           </CardTitle>
-                          <div className="flex items-center gap-2 text-primary xxs:font-normal xs:font-medium text-nowrap xxs:text-[14px] xs:text-[16px] sm:text-[18px]">
+                          <div className="flex items-center gap-2 text-primary font-medium text-sm xs:text-base md:text-lg">
                             <Building2 className="w-4 h-4" />
                             {exp.company}
                           </div>
                         </div>
                       </div>
-                      <Badge variant="secondary" className="shrink-0">
+                      <Badge
+                        variant="secondary"
+                        className="shrink-0 text-[10px] xs:text-xs"
+                      >
                         {exp.type}
                       </Badge>
                     </div>
 
-                    <div className="flex xxs:item-start xs:items-start xxs:flex-col md:flex-row pt-2 gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1 xxs:text-nowrap">
+                    <div className="flex flex-col md:flex-row pt-2 gap-4 text-xs xs:text-sm text-muted-foreground">
+                      <div className="flex items-center gap-1">
                         <CalendarDays className="w-4 h-4" />
                         {exp.duration}
                       </div>
-                      <div className="flex items-center gap-1 text-nowrap">
+                      <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
                         {exp.location}
                       </div>
@@ -181,20 +184,23 @@ const ExperienceSection = () => {
                   </CardHeader>
 
                   <CardContent>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className="text-muted-foreground mb-4 leading-relaxed text-sm xs:text-base">
                       {exp.description}
                     </p>
 
                     <ul className="space-y-2 mb-6">
                       {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm">
+                        <li
+                          key={i}
+                          className="flex items-start gap-2 text-xs xs:text-sm"
+                        >
                           <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
                           <span className="leading-relaxed">{achievement}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <div className="flex flex-wrap xxs:flex-col xs:flex-row gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <Badge
                           key={tech}

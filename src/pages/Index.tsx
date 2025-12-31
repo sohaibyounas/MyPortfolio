@@ -10,7 +10,7 @@ import ProjectSection from "@/components/ProjectSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Navigation />
       <main>
         <HeroSection />

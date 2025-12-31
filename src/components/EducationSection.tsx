@@ -36,10 +36,10 @@ const EducationSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="xxs:text-[30px] sm:text-[36px] md:text-[48px] font-heading font-bold mb-4 animate-fade-in-up">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-4 animate-fade-in-up">
             Education
           </h2>
-          <p className="xxs:text-[18px] xs:text-[20px] text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
             My academic journey and achievements in computer science
           </p>
         </div>
@@ -56,50 +56,56 @@ const EducationSection = () => {
                 <CardHeader>
                   <div className="flex items-start justify-between flex-wrap gap-4">
                     <div className="flex items-center gap-4">
-                      <div className="sm:w-12 sm:h-12 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center text-3xl">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center text-2xl md:text-3xl shrink-0">
                         {edu.logo}
                       </div>
                       <div>
-                        <CardTitle className="xxs:text-[12px] xs:text-[14px] sm:text-[16px] md:text-[20px] sm:font-medium md:font-semibold text-foreground mb-1 whitespace-normal">
+                        <CardTitle className="text-sm xs:text-base md:text-xl font-bold text-foreground mb-1">
                           {edu.institution}
                         </CardTitle>
-                        <div className="flex items-center gap-2 text-primary xs:font-normal sm:font-medium mb-2 whitespace-normal xxs:text-[9px] xs:text-[11px] sm:text-[11px] md:text-[16px]">
+                        <div className="flex items-center gap-2 text-primary font-medium mb-2 text-xs xs:text-sm md:text-base">
                           <GraduationCap className="w-4 h-4 shrink-0" />
                           <span>{edu.degree}</span>
                         </div>
-                        <div className="flex xxs:item-start xs:item-start sm:item-start md:items-center xxs:flex-col xs:flex-col sm:flex-col md:flex-row xxs:pr-[18px] gap-4 text-sm text-muted-foreground">
+                        <div className="flex flex-col md:flex-row md:items-center gap-4 text-xs xs:text-sm text-muted-foreground">
                           <div className="flex items-center gap-1">
                             <CalendarDays className="w-4 h-4" />
                             {edu.duration}
                           </div>
-                          <Badge variant="outline" className="text-xs">
+                          <Badge
+                            variant="outline"
+                            className="text-[10px] xs:text-xs"
+                          >
                             GPA: {edu.gpa}
                           </Badge>
                         </div>
                       </div>
                     </div>
-                    <Badge variant="secondary" className="shrink-0">
+                    <Badge
+                      variant="secondary"
+                      className="shrink-0 text-[10px] xs:text-xs"
+                    >
                       {edu.type}
                     </Badge>
                   </div>
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed xxs:text-[12px] xs:text-[14px] sm:text-[16px]">
+                  <p className="text-muted-foreground mb-6 leading-relaxed text-sm xs:text-base">
                     {edu.description}
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Highlights */}
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">
+                      <h4 className="font-semibold text-foreground mb-3 text-sm xs:text-base">
                         Key Highlights
                       </h4>
                       <ul className="space-y-2">
                         {edu.highlights.map((highlight, i) => (
                           <li
                             key={i}
-                            className="flex items-start gap-2 text-sm"
+                            className="flex items-start gap-2 text-xs xs:text-sm"
                           >
                             <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 shrink-0"></span>
                             <span className="leading-relaxed">{highlight}</span>
@@ -110,15 +116,15 @@ const EducationSection = () => {
 
                     {/* Relevant Courses */}
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">
+                      <h4 className="font-semibold text-foreground mb-3 text-sm xs:text-base">
                         Relevant Courses
                       </h4>
-                      <div className="flex flex-wrap xxs:flex-col xs:flex-col sm:flex-col md:flex-row gap-2">
+                      <div className="flex flex-wrap gap-2">
                         {edu.courses.map((course) => (
                           <Badge
                             key={course}
                             variant="outline"
-                            className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                            className="text-[10px] xs:text-xs hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
                           >
                             {course}
                           </Badge>
