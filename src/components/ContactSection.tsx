@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -79,21 +80,48 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // These keys should be set in your .env file
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    toast({
-      title: "Message sent successfully!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error("EmailJS configuration is missing");
+      }
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: "Sohaib", // You can change this to your name
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        variant: "destructive",
+        title: "Failed to send message",
+        description:
+          "There was an error sending your message. Please try again later or contact me via email directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
