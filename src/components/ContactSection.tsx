@@ -82,9 +82,9 @@ const ContactSection = () => {
 
     try {
       // These keys should be set in your .env file
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      const serviceId = "service_we9dcd5";
+      const templateId = "template_rhcyej2";
+      const publicKey = "oFdMuyvEBt7rgL6ck";
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error("EmailJS configuration is missing");
