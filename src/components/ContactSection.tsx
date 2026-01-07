@@ -98,7 +98,14 @@ const ContactSection = () => {
         to_name: "Sohaib", // You can change this to your name
       };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log("Attempting to send email...");
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+      console.log("EmailJS Result:", result);
 
       toast({
         title: "Message sent successfully!",
@@ -111,13 +118,14 @@ const ContactSection = () => {
         subject: "",
         message: "",
       });
-    } catch (error) {
-      console.error("EmailJS Error:", error);
+    } catch (error: any) {
+      console.error("EmailJS Error details:", error);
       toast({
         variant: "destructive",
         title: "Failed to send message",
         description:
-          "There was an error sending your message. Please try again later or contact me via email directly.",
+          error?.text ||
+          "There was an error sending your message. Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
